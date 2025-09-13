@@ -1,0 +1,241 @@
+-- ================================================== --
+-- ||     LIBRARY GUI CUSTOM V2.0 - BY YOU & AI      || --
+-- ||  (Mobile Ready, Draggable Minimizer Button)    || --
+-- ================================================== --
+
+local UserInputService = game:GetService("UserInputService")
+local ms = game.Players.LocalPlayer:GetMouse()
+local TweenService = game:GetService("TweenService")
+
+-- Helper Functions for Animations
+local function TweenObjects(Object,ABC,Delay)
+	local ToTween = Object
+	local tweenInfo = TweenInfo.new(Delay,Enum.EasingStyle.Quart,Enum.EasingDirection.InOut,0,false,0)
+	local Tweener = TweenService:Create(ToTween,tweenInfo,{Rotation = ABC})
+	Tweener:Play()
+end
+
+local function TweenFade(Object,ABC,Delay)
+	local ToTween = Object
+	local tweenInfo = TweenInfo.new(Delay,Enum.EasingStyle.Sine,Enum.EasingDirection.Out,0,false,0)
+	local Tweener = TweenService:Create(ToTween,tweenInfo,{BackgroundTransparency = ABC})
+	Tweener:Play()
+end
+
+local function TweenColor(Object,R,G,B,Delay)
+	local ToTween = Object
+	local tweenInfo = TweenInfo.new(Delay,Enum.EasingStyle.Sine,Enum.EasingDirection.Out,0,false,0)
+	local Tweener = TweenService:Create(ToTween,tweenInfo,{Color = Color3.fromRGB(R,G,B)})
+	Tweener:Play()
+end
+
+local WindowsAlignment = {
+	[1] = 0.1,
+	[2] = 0.3,
+	[3] = 0.5,
+	[4] = 0.7
+}
+
+local Windows = 0
+local Library = {}
+
+LibraryOptions = {
+	["Scale"] = 0.9
+}
+
+pcall(function()
+	for i,v in next,game.CoreGui:GetChildren() do
+		if v.Name == "lib" then
+			v:Destroy()
+		end
+	end
+end)
+
+-- Loader function remains the same, you can fill this in
+function Library:Loader(HubText,CreditsText,CommentText)
+	-- Paste your full loader code here
+end
+
+function Library:Window(Title,keycode)
+	local foldersCount = 0
+	local Window = {}
+	Windows += 1
+	local ThatWindow = Windows
+	local lib = Instance.new("ScreenGui")
+	local Topbar = Instance.new("Frame")
+	local UICorner = Instance.new("UICorner")
+	local bb = Instance.new("Frame")
+	local ScrollMainButton = Instance.new("ImageButton")
+	local Folders = Instance.new("Frame")
+	local MainTitle = Instance.new("TextLabel")
+	local UIListLayout = Instance.new("UIListLayout", Folders)
+	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+	UIListLayout.Padding = UDim.new(0, -1)
+	local IsScrolledMain = false
+	local FoldersSize = 0
+
+	lib.Name = "lib"
+	lib.Parent = game.CoreGui
+	lib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+	Topbar.Name = "Topbar"
+	Topbar.Parent = lib
+	Topbar.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+	Topbar.BorderSizePixel = 0
+	local pos_x
+	for i,v in next,WindowsAlignment do
+		if i == ThatWindow then
+			Topbar.Position = UDim2.new(v, 0, 0.03, 0)
+			pos_x = v
+		end
+	end
+	Topbar.Size = UDim2.new(0, 242, 0, 40)
+	local point = Instance.new("Frame",Topbar)
+	point.AnchorPoint = Vector2.new(0.5,0.5); point.Position = UDim2.new(0.5,0,0.5,0); point.BorderSizePixel = 0; point.BackgroundTransparency = 1; point.Size = UDim2.new(0,40,0,40)
+	UICorner.Parent = Topbar
+	bb.Name = "bb"; bb.Parent = Topbar; bb.BackgroundColor3 = Color3.fromRGB(26, 26, 26); bb.BorderSizePixel = 0; bb.Position = UDim2.new(0, 0, 0.649999976, -1); bb.Size = UDim2.new(0, 242, 0, 15)
+	ScrollMainButton.Name = "ScrollMainButton"; ScrollMainButton.Parent = Topbar; ScrollMainButton.BackgroundTransparency = 1.000; ScrollMainButton.Position = UDim2.new(0.833354354, 0, 0, 0); ScrollMainButton.Size = UDim2.new(0, 40, 0, 40); ScrollMainButton.ZIndex = 2; ScrollMainButton.Image = "rbxassetid://3926307971"; ScrollMainButton.ImageColor3 = Color3.fromRGB(107, 107, 107); ScrollMainButton.ImageRectOffset = Vector2.new(324, 524); ScrollMainButton.ImageRectSize = Vector2.new(36, 36); ScrollMainButton.Rotation = 180
+	ScrollMainButton.MouseButton1Click:connect(function() if not IsScrolledMain then IsScrolledMain = true; TweenObjects(ScrollMainButton,180,0.3); Folders:TweenSize(UDim2.new(0,242,0,FoldersSize),"In","Sine",0.3,true,nil) else IsScrolledMain = false; TweenObjects(ScrollMainButton,0,0.3); Folders:TweenSize(UDim2.new(0,242,0,0),"Out","Sine",0.3,true,nil) end end)
+	Folders.Name = "Folders"; Folders.Parent = Topbar; Folders.BackgroundColor3 = Color3.fromRGB(36, 36, 36); Folders.BackgroundTransparency = 1; Folders.BorderSizePixel = 0; Folders.Position = UDim2.new(0, 0, 1, -1); Folders.ClipsDescendants = true; Folders.Size = UDim2.new(0,242,0,0)
+	MainTitle.Name = "MainTitle"; MainTitle.Parent = Topbar; MainTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255); MainTitle.BackgroundTransparency = 1.000; MainTitle.BorderSizePixel = 0; MainTitle.Position = UDim2.new(0.0495867766, 0, 0, 0); MainTitle.Size = UDim2.new(0, 189, 0, 38); MainTitle.Font = Enum.Font.SourceSansBold; MainTitle.TextColor3 = Color3.fromRGB(132, 132, 132); MainTitle.TextSize = 20.000; MainTitle.TextXAlignment = Enum.TextXAlignment.Left; MainTitle.Text = Title
+	
+	-- Draggable Minimizer Button with Mobile Support
+	local MinimizedButton = Instance.new("TextButton")
+	MinimizedButton.Name = "MinimizedButton"
+	MinimizedButton.Parent = lib
+	MinimizedButton.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+	MinimizedButton.BorderSizePixel = 0
+	MinimizedButton.Size = UDim2.new(0, 120, 0, 35)
+	MinimizedButton.Position = UDim2.new(0.05, 0, 0.5, 0)
+	MinimizedButton.Font = Enum.Font.SourceSansBold
+	MinimizedButton.Text = Title
+	MinimizedButton.TextColor3 = Color3.fromRGB(220, 220, 220)
+	MinimizedButton.TextSize = 16
+	MinimizedButton.Visible = false
+	local MinimizedCorner = Instance.new("UICorner", MinimizedButton)
+	MinimizedCorner.CornerRadius = UDim.new(0, 6)
+	local MinimizedStroke = Instance.new("UIStroke", MinimizedButton)
+	MinimizedStroke.Color = Color3.fromRGB(60, 60, 60)
+	MinimizedStroke.Thickness = 1
+
+	local Hided = false
+	
+	local function ShowWindow()
+		Hided = false
+		MinimizedButton.Visible = false
+		Topbar:TweenPosition(UDim2.new(pos_x, 0, 0.03, 0), "Out", "Quint", 0.5, true)
+	end
+
+	local function HideWindow()
+		Hided = true
+		MinimizedButton.Visible = true
+		Topbar:TweenPosition(UDim2.new(pos_x, 0, -1, 0), "In", "Quint", 0.5, true)
+	end
+	
+	UserInputService.InputBegan:Connect(function(key,isTyping)
+		if not isTyping and key.KeyCode == Enum.KeyCode[keycode] then
+			if Hided then ShowWindow() else HideWindow() end
+		end
+	end)
+	
+	local dragTime = 0
+	MinimizedButton.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragTime = tick()
+		end
+	end)
+
+	MinimizedButton.InputEnded:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and Hided then
+			if (tick() - dragTime) < 0.2 then
+				ShowWindow()
+			end
+		end
+	end)
+
+	-- Main Window Drag Logic (Mobile Ready)
+	local draggingTopbar, dragStartTopbar, startPosTopbar
+	Topbar.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			draggingTopbar = true
+			dragStartTopbar = input.Position
+			startPosTopbar = Topbar.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then draggingTopbar = false end
+			end)
+		end
+	end)
+	UserInputService.InputChanged:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) and draggingTopbar then
+			local delta = input.Position - dragStartTopbar
+			Topbar.Position = UDim2.new(startPosTopbar.X.Scale, startPosTopbar.X.Offset + delta.X, startPosTopbar.Y.Scale, startPosTopbar.Y.Offset + delta.Y)
+		end
+	end)
+	
+	-- Minimizer Button Drag Logic (Mobile Ready)
+	local draggingMinimized, dragStartMinimized, startPosMinimized
+	MinimizedButton.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			draggingMinimized = true
+			dragStartMinimized = input.Position
+			startPosMinimized = MinimizedButton.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then draggingMinimized = false end
+			end)
+		end
+	end)
+	UserInputService.InputChanged:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) and draggingMinimized then
+			local delta = input.Position - dragStartMinimized
+			MinimizedButton.Position = UDim2.new(startPosMinimized.X.Scale, startPosMinimized.X.Offset + delta.X, startPosMinimized.Y.Scale, startPosMinimized.Y.Offset + delta.Y)
+		end
+	end)
+	
+    -- Main Window Drag Physics Effect
+    local dragInput
+	local k = 0.04
+    local speed = 5
+	local function update(input)
+		local delta = input.Position - dragStartTopbar
+		local position = Vector2.new(ms.X,ms.Y)
+		local force = position - point.AbsolutePosition
+		local mag = force.Magnitude - 1
+		force = force.Unit
+		force *= -1 * k * mag
+		local formula = speed * force
+		TweenService:Create(Topbar,TweenInfo.new(.1),{Rotation = formula.X}):Play()
+	end
+    Topbar.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+            input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					TweenService:Create(Topbar,TweenInfo.new(.1),{Rotation = 0}):Play()
+				end
+			end)
+        end
+    end)
+    Topbar.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and draggingTopbar then
+			update(input)
+		end
+	end)
+
+	function Window:Folder(Title)
+		-- Paste your full Folder and component functions (Button, Slider, Toggle, etc.) here
+		-- For demonstration, a placeholder is used.
+		local InsideFolder = {}
+		function InsideFolder:Button(Text, callback) print("Button Created:", Text) end
+		function InsideFolder:Toggle(Text, callback, IsToggled) print("Toggle Created:", Text) end
+		function InsideFolder:Slider(Text, min, max, callback) print("Slider Created:", Text) end
+		return InsideFolder
+	end
+	
+	return Window
+end
+
+return Library
