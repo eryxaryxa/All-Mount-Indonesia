@@ -1,6 +1,6 @@
 -- Path export Luau - 2025-09-23 21:41:16
 return {
-  name = "mt_daunjonggun5",
+  name = "kuliah",
   hz = 20.000,
   samples = {
     { t = 0.025, x = -6.805, y = 13.732, z = -7.896, yaw = 0.00000 },
