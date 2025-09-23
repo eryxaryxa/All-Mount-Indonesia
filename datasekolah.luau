@@ -1,4 +1,4 @@
--- Path export Luau - 2025-09-24 01:34:02
+-- data sekolah Luau - 2025-09-24 01:34:02
 return {
   name = "data sekolah",
   hz = 20.000,
