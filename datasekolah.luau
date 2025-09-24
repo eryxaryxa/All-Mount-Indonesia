@@ -1,6 +1,6 @@
 -- Path export Luau - 2025-09-24 09:34:33
 return {
-  name = "MT DAUN..",
+  name = "datasekolah",
   hz = 20.000,
   samples = {
     { t = 0.033, x = -5.940, y = 14.605, z = -6.687, yaw = -0.05308 },
