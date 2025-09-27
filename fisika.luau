@@ -1,6 +1,6 @@
--- Path export Luau - 2025-09-27 01:36:52
+-- fisika export Luau - 2025-09-27 01:36:52
 return {
-  name = "mt yntkts111",
+  name = "fisika",
   hz = 20.000,
   samples = {
     { t = 0.017, x = -663.500, y = 58.748, z = -444.300, yaw = 0.00000 },
