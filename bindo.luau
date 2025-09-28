@@ -1,6 +1,6 @@
--- Path export Luau - 2025-09-28 01:06:51
+-- bindo export Luau - 2025-09-28 01:06:51
 return {
-  name = "serapinn",
+  name = "bindo",
   hz = 20.000,
   samples = {
     { t = 0.017, x = -19.881, y = 17.833, z = 375.088, yaw = -1.57202 },
