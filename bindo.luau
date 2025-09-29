@@ -1,6 +1,6 @@
--- Path export Luau - 2025-09-29 04:30:00
+-- bindo export Luau - 2025-09-29 04:30:00
 return {
-  name = "mount seravine000",
+  name = "bindo",
   hz = 20.000,
   samples = {
     { t = 0.017, x = -20.000, y = 16.980, z = 370.000, yaw = 0.00000 },
