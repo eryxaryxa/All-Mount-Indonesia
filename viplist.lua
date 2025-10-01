@@ -23,7 +23,8 @@ return {
     [9549539043] = { permanent = true },
     [8527678849] = { expiredAt = "2025-10-05" },
     [8980772767] = { expiredAt = "2025-10-30" },
-    [8182685948] = { permanent = true }
-
+    [8182685948] = { permanent = true },
+    [9453502643] = { permanent = true },
+    [9465005360] = { permanent = true }
 
 }
