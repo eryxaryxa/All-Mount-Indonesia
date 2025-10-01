@@ -1,4 +1,4 @@
--- Path export Luau - 2025-10-01 13:43:47
+-- vioaneh export Luau - 2025-10-01 13:43:47
 return {
   name = "lkljklk",
   hz = 20.000,
