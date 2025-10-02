@@ -1,6 +1,6 @@
--- Path export Luau - 2025-09-30 21:37:59
+-- datadummy2 export Luau - 2025-09-30 21:37:59
 return {
-  name = "mount ravika1",
+  name = "datadummy2",
   hz = 20.000,
   samples = {
     { t = 0.017, x = 308.381, y = 108.980, z = -913.885, yaw = 1.93250 },
