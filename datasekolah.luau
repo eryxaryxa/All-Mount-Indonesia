@@ -1,6 +1,6 @@
--- Path export Luau - 2025-10-03 15:02:45
+-- datasekolah export Luau - 2025-10-03 15:02:45
 return {
-  name = "mt daunn",
+  name = "datasekolah",
   hz = 20.000,
   samples = {
     { t = 0.017, x = -6.805, y = 13.732, z = -7.896, yaw = 0.00000 },
