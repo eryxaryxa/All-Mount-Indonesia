@@ -1,6 +1,6 @@
--- Path export Luau - 2025-10-05 21:32:34
+-- datadummy11 export Luau - 2025-10-05 21:32:34
 return {
-  name = "mt ckptw",
+  name = "datadummy11",
   hz = 20.000,
   samples = {
     { t = 0.021, x = 245.836, y = 12.898, z = -992.848, yaw = -0.04662 },
