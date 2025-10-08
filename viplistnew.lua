@@ -1,5 +1,5 @@
 return {
-    [8858222684] = { vip = true, permanent = true },
+    [8858222684] = { svip = true, permanent = true },
     [9612905028] = { vip = true, permanent = true },
     [8286162582] = { vip = true, permanent = true },
     [8975946846] = { vip = true, permanent = true },
