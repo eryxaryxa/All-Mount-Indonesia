@@ -94,5 +94,7 @@ return {
     [9576357040] = { svip = true, expiredAt = "2025-10-23" },
     [8430575093] = { svip = true, expiredAt = "2025-11-08" },
     [7969584096] = { vip = true, expiredAt = "2025-11-08" },
-    [8458742328] = { svip = true, expiredAt = "2025-10-24" }
+    [8458742328] = { svip = true, expiredAt = "2025-10-24" },
+    [3466782565] = { kvip = true, expiredAt = "2025-10-24" },
+    [9165226440] = { kvip = true, expiredAt = "2025-10-24" }
 }
