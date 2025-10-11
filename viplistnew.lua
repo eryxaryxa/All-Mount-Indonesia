@@ -114,4 +114,5 @@ return {
     [9093242681] = { svip = true, expiredAt = "2025-10-26" },
     [8499519488] = { vip = true, expiredAt = "2025-10-26" },
     [4728757604] = { svip = true, permanent = true }
+    [8361073659] = { svip = true, permanent= true }
 }
