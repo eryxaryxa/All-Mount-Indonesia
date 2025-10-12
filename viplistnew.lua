@@ -76,7 +76,7 @@ return {
     [9653636196] = { vip = true, expiredAt = "2025-12-05" },
     [9330866251] = { vip = true, expiredAt = "2025-10-20" },
     [3197881036] = { vip = true, expiredAt = "2025-12-05" },
-    [9576100024] = { svip = true, expiredAt = "2025-11-05" },
+    [9702314613] = { svip = true, expiredAt = "2025-11-05" },
     [8476683981] = { vip = true, expiredAt = "2025-11-06" },
     [9364278661] = { vip = true, expiredAt = "2025-10-21" },
     [9659795924] = { vip = true, expiredAt = "2025-11-06" },
