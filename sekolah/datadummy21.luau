@@ -1,6 +1,6 @@
--- Path export Luau - 2025-10-13 21:05:58
+-- datadummy21 export Luau - 2025-10-13 21:05:58
 return {
-  name = "3",
+  name = "datadummy21",
   hz = 20.000,
   samples = {
     { t = 0.008, x = 237.896, y = -474.632, z = -2256.548, yaw = 0.00000 },
