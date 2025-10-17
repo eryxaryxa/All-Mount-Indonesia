@@ -132,5 +132,6 @@ return {
     [8905246034] = { vip = true, expiredAt = "2025-10-29" },
     [9397901495] = { vip = true, expiredAt = "2025-11-14" },
     [8530500388] = { svip = true, expiredAt = "2025-12-15" },
-    [8995836139] = { vip = true, expiredAt = "2025-10-30" }
+    [8995836139] = { vip = true, expiredAt = "2025-10-30" },
+    [9187081033] = { svip = true, expiredAt = "2025-11-03" }
 }
