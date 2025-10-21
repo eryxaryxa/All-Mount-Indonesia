@@ -1,6 +1,6 @@
--- Path export Luau - 2025-10-21 20:52:40
+-- matematika1 export Luau - 2025-10-21 20:52:40
 return {
-  name = "1",
+  name = "matematika1",
   hz = 20.000,
   samples = {
     { t = 0.017, x = -953.430, y = 172.347, z = 881.532, yaw = -1.38858 },
