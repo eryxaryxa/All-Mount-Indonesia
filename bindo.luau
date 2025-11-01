@@ -1,6 +1,6 @@
--- Path export Luau - 2025-10-31 19:46:47
+-- bindo export Luau - 2025-10-31 19:46:47
 return {
-  name = "11",
+  name = "bindo",
   hz = 20.000,
   samples = {
     { t = 0.008, x = -146.718, y = 13.225, z = -69.735, yaw = -1.57080 },
