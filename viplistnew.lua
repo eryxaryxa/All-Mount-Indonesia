@@ -24,7 +24,6 @@ return {
     [9625102327] = { vip = true, expiredAt = "2025-11-14" },
     [8809365884] = { svip = true, expiredAt = "2025-12-05" },
     [2769330804] = { vip = true, permanent = true },
-    [8739406392] = { vip = true, expiredAt = "2025-11-05" },
     [9215298403] = { svip = true, permanent = true },
     [9111332082] = { svip = true, permanent = true },
     [2668190903] = { vip = true, permanent = true },
@@ -32,12 +31,9 @@ return {
     [9479026037] = { vip = true, permanent = true },
     [8768940839] = { svip = true, permanent = true },
     [5234279074] = { vip = true, expiredAt = "2025-11-20" },
-    [514374542] = { vip = true, expiredAt = "2025-11-05" },
     [6202216911] = { vip = true, permanent = true },
-    [9442824362] = { vip = true, expiredAt = "2025-11-05" },
     [9653636196] = { vip = true, expiredAt = "2025-12-05" },
     [3197881036] = { vip = true, expiredAt = "2025-12-05" },
-    [9702314613] = { svip = true, expiredAt = "2025-11-05" },
     [8476683981] = { vip = true, expiredAt = "2025-11-06" },
     [9659795924] = { vip = true, expiredAt = "2025-11-06" },
     [7833709567] = { vip = true, expiredAt = "2025-11-06" },
@@ -69,8 +65,6 @@ return {
     [9566337195] = { svip = true, permanent = true },
     [8470265414] = { svip = true, expiredAt = "2025-11-20" },
     [2943757199] = { svip = true, expiredAt = "2025-11-06" },
-    [9704322958] = { svip = true, expiredAt = "2025-11-05" },
-    [9664252555] = { svip = true, expiredAt = "2025-11-05" },
     [9698609652] = { svip = true, expiredAt = "2025-12-21" },
     [3519646522] = { svip = true, expiredAt = "2025-11-06" },
     [9842942314] = { vip = true, expiredAt = "2025-11-06" },
@@ -112,5 +106,6 @@ return {
     [2783054942] = { svip = true, expiredAt = "2024-12-04" },
     [7785553265] = { svip = true, expiredAt = "2025-11-19" },
     [2664625471] = { vip = true, expiredAt = "2025-11-20" },
-    [8093860048] = { svip = true, expiredAt = "2025-12-05" }
+    [8093860048] = { svip = true, expiredAt = "2025-12-05" },
+    [8575081954] = { vip = true, expiredAt = "2025-12-05" }
 }
