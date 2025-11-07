@@ -86,7 +86,6 @@ return {
     [9160683577] = { svip = true, permanent = true },
     [9195252680] = { svip = true, permanent = true },
     [5254943711] = { svip = true, expiredAt = "2025-11-17" },
-    [8764023426] = { svip = true, expiredAt = "2025-11-02" },
     [9510495553] = { svip = true, expiredAt = "2025-11-18" },
     [9250220426] = { svip = true, expiredAt = "2025-11-18" },
     [9842942314] = { svip = true, expiredAt = "2025-11-08" },
