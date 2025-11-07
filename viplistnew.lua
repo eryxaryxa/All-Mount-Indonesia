@@ -98,5 +98,6 @@ return {
     [8093860048] = { svip = true, expiredAt = "2025-12-05" },
     [8575081954] = { vip = true, expiredAt = "2025-12-05" },
     [9740921304] = { svip = true, expiredAt = "2025-12-07" },
-    [9846958002] = { gvip = true, expiredAt = "2025-11-22" }
+    [9846958002] = { gvip = true, expiredAt = "2025-11-22" },
+    [9625102327] = { svip = true, permanent = true }
 }
