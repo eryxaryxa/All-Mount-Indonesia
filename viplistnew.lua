@@ -38,8 +38,6 @@ return {
     [4728757604] = { svip = true, permanent = true },
     [8361073659] = { svip = true, permanent = true },
     [9412346898] = { svip = true, permanent = true },
-    [9378329236] = { vip = true, expiredAt = "2025-11-14" },
-    [9397901495] = { vip = true, expiredAt = "2025-11-14" },
     [8530500388] = { svip = true, expiredAt = "2025-12-15" },
     [4306337542] = { vip = true, expiredAt = "2025-11-16" },
     [9461509474] = { svip = true, expiredAt = "2025-11-17" },
@@ -61,7 +59,6 @@ return {
     [8000018212] = { svip = true, permanent = true },
     [8858933924] = { svip = true, permanent = true },
     [9838247262] = { svip = true, expiredAt = "2025-12-28" },
-    [6190628077] = { vip = true, expiredAt = "2025-11-14" },
     [4290971058] = { gvip = true, expiredAt = "2025-11-16" },
     [8856764678] = { svip = true, expiredAt = "2025-12-01" },
     [9160683577] = { svip = true, permanent = true },
@@ -94,5 +91,6 @@ return {
     [8944326905] = { svip = true, expiredAt = "2026-01-11" },
     [8875567332] = { svip = true, expiredAt = "2025-11-28" },
     [9021590399] = { svip = true, permanent = true },
-    [8464384497] = { svip = true, permanent = true }
+    [8464384497] = { svip = true, permanent = true },
+    [3872117167] = { svip = true, expiredAt = "2025-12-15" }
 }
