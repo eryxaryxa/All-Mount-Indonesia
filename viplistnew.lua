@@ -1,4 +1,4 @@
-return {
+jinreturn {
     [7133753845] = { svip = true, permanent = true },
     [8858222684] = { svip = true, permanent = true },
     [9612905028] = { vip = true, permanent = true },
@@ -80,5 +80,6 @@ return {
     [8928550762] = { kvip = true, expiredAt =
 "2026-01-06" },
     [9719560312] = { kvip = true, expiredAt =
-"2026-01-08" }
+"2026-01-08" },
+    [8802951904] = { gvip = true, permanent = true }
 }
