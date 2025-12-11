@@ -1,4 +1,4 @@
-jinreturn {
+return {
     [7133753845] = { svip = true, permanent = true },
     [8858222684] = { svip = true, permanent = true },
     [9612905028] = { vip = true, permanent = true },
@@ -77,9 +77,7 @@ jinreturn {
     [4925166700] = { svip = true, expiredAt = "2025-12-30" },
     [9478506540] = { gvip = true, expiredAt = "2025-12-10" },
     [8980772767] = { svip = true, expiredAt = "2026-01-02" },
-    [8928550762] = { kvip = true, expiredAt =
-"2026-01-06" },
-    [9719560312] = { kvip = true, expiredAt =
-"2026-01-08" },
+    [8928550762] = { kvip = true, expiredAt = "2026-01-06" },
+    [9719560312] = { kvip = true, expiredAt = "2026-01-08" },
     [8802951904] = { gvip = true, permanent = true }
 }
