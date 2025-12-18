@@ -81,5 +81,6 @@ return {
     [8928550762] = { kvip = true, expiredAt = "2026-01-06" },
     [9719560312] = { kvip = true, expiredAt = "2026-01-08" },
     [8802951904] = { gvip = true, permanent = true },
-    [5840493713] = { svip = true, expiredAt = "2026-01-07" }
+    [5840493713] = { svip = true, expiredAt = "2026-01-07" },
+    [9503285828] = { svip = true, expiredAt = "2026-01-18" }
 }
