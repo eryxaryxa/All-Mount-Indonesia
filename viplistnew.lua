@@ -14,6 +14,7 @@ return {
     [9453502643] = { vip = true, permanent = true },
     [9465005360] = { svip = true, permanent = true },
     [9330464485] = { vip = true, permanent = true },
+    [8980772767] = { svip = true, permanent = true },
     [10064517457] = { svip = true, permanent = true },
     [4284812212] = { svip = true, permanent = true },
     [9461651888] = { vip = true, expiredAt = "2025-12-02" },
