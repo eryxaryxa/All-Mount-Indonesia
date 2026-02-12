@@ -88,4 +88,4 @@ return {
     [9271447449] = { vip = true, expiredAt = "2026-03-13" },
     [8085021276] = { vip = true, expiredAt = "2026-03-14" }
 }
-}
+
